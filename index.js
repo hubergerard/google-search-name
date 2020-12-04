@@ -4,7 +4,7 @@ const startIndex = 0; // (monter de 20 en 20)
 
 function handleFileSelect(evt) {
     const files = evt.target.files; 
-    for (let i = startIndex + 20, f = files[i] ; i < 1 ; i--) {
+    for (let i = startIndex, f ; f = files[i] ; i++) {
 
         const reader = new FileReader();
         reader.onload = (function (file) {
